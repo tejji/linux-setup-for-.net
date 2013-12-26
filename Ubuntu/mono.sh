@@ -1,5 +1,6 @@
 apt-get install autoconf automake libtool g++ gettext
-apt-get install mono-gmcs<apt-get install git
+apt-get install mono-gmcs
+apt-get install git
 apt-get install apache2-threaded-dev
 
 cd /opt
@@ -44,3 +45,5 @@ make install
 # Add MonoServerPath /usr/bin/mod-mono-server4 (without quotes!) under the "If Modules condition"
 
 # /etc/init.d/apache2 restart
+
+# credits http://mono.1490590.n4.nabble.com/Installation-procedure-of-Mono-3-0-on-Ubuntu-12-04-td4657323.html
