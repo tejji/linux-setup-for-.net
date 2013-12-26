@@ -24,7 +24,7 @@ chown -R root:root *
 
 perl -pi -e 's/HAVE_LOCALCHARSET_H 1/HAVE_LOCALCHARSET_H 0/' eglib/config.h
 make get-monolite-latest
-make -j 8 (may take a while)
+make -j 8 
 make install
 
 echo export PKG_CONFIG_PATH=/usr/lib/pkgconfig:$PKG_CONFIG_PATH>>~/.bash_profile
