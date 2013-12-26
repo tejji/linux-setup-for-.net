@@ -1,6 +1,5 @@
 apt-get install autoconf automake libtool g++ gettext
-apt-get install mono-gmcs<
-apt-get install git
+apt-get install mono-gmcs<apt-get install git
 apt-get install apache2-threaded-dev
 
 cd /opt
