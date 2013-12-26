@@ -3,7 +3,7 @@
 
 TOPDIR=$(pwd)
 BUILDDIR=$TOPDIR/build
-PREFIX=/opt/mono-3.2.4
+PREFIX=/opt/mono-3.2.3
 
 export PATH=$PREFIX/bin:$PATH>>~/.bash_profile
 export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig:$PKG_CONFIG_PATH >>~/.bash_profile
@@ -24,7 +24,7 @@ echo
 
 cd $BUILDDIR
 
-PACKAGES=("mono-3.2.4"
+PACKAGES=("mono-3.2.3"
 "libgdiplus-2.10.9"
 "gtk-sharp-2.12.11"
 "xsp-2.10.2"
