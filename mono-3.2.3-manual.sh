@@ -17,9 +17,9 @@ echo export PKG_CONFIG_PATH=/usr/lib/pkgconfig:$PKG_CONFIG_PATH>>~/.bash_profile
 echo export PATH=/usr/bin:$PATH>>~/.bash_profile
 source ~/.bash_profile
 
+cd /root/setup
 wget http://origin-download.mono-project.com/sources/xsp/xsp-2.10.2.tar.bz2
 tar xjf xsp-2.10.2.tar.bz2
-cd /root/setup
 chown root:root xsp-2.10.2
 cd xsp-2.10.2
 chown -R root:root *
@@ -28,9 +28,9 @@ export PKG_CONFIG_PATH=`whereis pkgconfig | awk '{print $2}'`
 make
 make install
 
+cd /root/setup
 wget http://origin-download.mono-project.com/sources/libgdiplus/libgdiplus-2.10.9.tar.bz2
 tar xjf libgdiplus-2.10.9.tar.bz2
-cd /root/setup
 chown root:root libgdiplus-2.10.9
 cd libgdiplus-2.10.9
 chown -R root:root *
@@ -38,9 +38,9 @@ chown -R root:root *
 make
 make install
 
+cd /root/setup
 wget http://origin-download.mono-project.com/sources/mod_mono/mod_mono-2.10.tar.bz2
 tar xjf mod_mono-2.10.tar.bz2
-cd /root/setup
 chown root:root mod_mono-2.10
 cd mod_mono-2.10
 chown -R root:root *
