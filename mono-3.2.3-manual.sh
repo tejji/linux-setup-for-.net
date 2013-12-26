@@ -1,4 +1,4 @@
-wget http:/dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 sudo rpm -Uvh epel-release-6*.rpm
 
 yum -y install make gcc-c++ gettext glib2-devel libpng-devel libexif-devel libX11-devel fontconfig-devel
