@@ -5,4 +5,7 @@
 update-rc.d -f apparmor remove
 apt-get remove apparmor apparmor-utils
 
+echo "dns-nameservers 8.8.8.8 8.8.4.4" >> /etc/network/interfaces
+/etc/init.d/networking restart
+
 reboot
