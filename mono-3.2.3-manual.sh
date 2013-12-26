@@ -7,7 +7,7 @@ cd setup
 wget http:/dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 sudo rpm -Uvh epel-release-6*.rpm
 
-wget http:/download.mono-project.com/sources/mono/mono-3.2.3.tar.bz2
+wget http://download.mono-project.com/sources/mono/mono-3.2.3.tar.bz2
 wget http://origin-download.mono-project.com/sources/xsp/xsp-2.10.2.tar.bz2
 wget http://origin-download.mono-project.com/sources/libgdiplus/libgdiplus-2.10.9.tar.bz2
 wget http://origin-download.mono-project.com/sources/mod_mono/mod_mono-2.10.tar.bz2
