@@ -5,10 +5,10 @@ TOPDIR=$(pwd)
 BUILDDIR=$TOPDIR/build
 PREFIX=/opt/mono-3.2.4
 
-export PATH=$PREFIX/bin:$PATH
-export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig:$PKG_CONFIG_PATH
+export PATH=$PREFIX/bin:$PATH>>~/.bash_profile
+export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig:$PKG_CONFIG_PATH >>~/.bash_profile
 export LD_LIBRARY_PATH=$PREFIX/lib:$LD_LIBRARY_PATH
-
+source ~/.bash_profile
 
 echo "updating existing system"
 yum update -y
