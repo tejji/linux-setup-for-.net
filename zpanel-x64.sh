@@ -10,4 +10,4 @@ chmod +x installer-10-1-0-centos-64.sh.x
 yum install ld-linux.so.2 curl
 ./installer-10-1-0-centos-64.sh.x
 
-setso --set server_ip 000.000.000.000
+setso --set server_ip 162.248.9.179
