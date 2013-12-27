@@ -65,17 +65,17 @@ make install
 # OR
 # Paste it into below location else ignore this and follow from next line
 
-# http://go-mono.com/config-mod-mono/Default.aspx and copy every thing from the Application Preview and paste it into 
+# http://go-mono.com/config-mod-mono/Default.aspx >> VirtualHost >> fill form >> Preview >> copy from MonoServerPath and paste it into 
 # should include following
-# Alias /videodow.com "/var/zpanel/hostdata/zadmin/public_html/site_name"
-# MonoServerPath videodow.com "/usr/bin/mod-mono-server4"
+# Alias /site.name "/var/zpanel/hostdata/zadmin/public_html/site_name"
+# MonoServerPath site.name "/usr/bin/mod-mono-server4"
 # MonoDebug site.name true
 # MonoSetEnv site.name MONO_IOMAP=all
-# MonoApplications site.name "/site.name:/var/zpanel/hostdata/zadmin/public_html/site_name"
-#  <Location "/site.name">
+# MonoApplications site.name "/:/var/zpanel/hostdata/zadmin/public_html/site_name" # <-- ENSURE THAT LOCATION IS / INSTEAD OF /site.name
+#  <Location "/"> # <-- ENSURE THAT LOCATION IS / INSTEAD OF /site.name
 #    Allow from all
 #    Order allow,deny
-#    MonoSetServerAlias videodow.com
+#    MonoSetServerAlias site.name
 #    SetHandler mono
 #    SetOutputFilter DEFLATE
 #    SetEnvIfNoCase Request_URI "\.(?:gif|jpe?g|png)$" no-gzip dont-vary
