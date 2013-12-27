@@ -7,8 +7,8 @@ apt-get install apache2-threaded-dev
 apt-get install make 
 apt-get install libx11-dev
 apt-get install libexif-dev libjpeg-dev libpng-dev libtiff-def
-
-apt-get install build-essential bison flex gtk-sharp2-gapi boo gdb valac libfontconfig1-dev libcairo2-dev libpango1.0-dev libfreetype6-dev libexif-dev libtiff4-dev libgif-dev zlib1g-dev libatk1.0-dev libjpeg8-dev libjpeg-turbo8-dev libglib2.0-dev libgtk2.0-dev libglade2-dev libart-2.0-dev libgnomevfs2-dev libgnome-desktop-dev libgnome2-dev libgnomecanvas2-dev libgnomeui-dev libgnomeprint2.2-dev libgnomeprintui2.2-dev libpanel-applet-4-dev libnautilus-extension-dev librsvg2-dev libgtkhtml3.14-dev libgtksourceview2.0-dev libgtksourceview2.0-dev libvte-dev libwnck-dev libnspr4-dev libnss3-dev libwebkit-dev 
+# may be above 2 lines are optional
+# apt-get install build-essential bison flex gtk-sharp2-gapi boo gdb valac libfontconfig1-dev libcairo2-dev libpango1.0-dev libfreetype6-dev libexif-dev libtiff4-dev libgif-dev zlib1g-dev libatk1.0-dev libjpeg8-dev libjpeg-turbo8-dev libglib2.0-dev libgtk2.0-dev libglade2-dev libart-2.0-dev libgnomevfs2-dev libgnome-desktop-dev libgnome2-dev libgnomecanvas2-dev libgnomeui-dev libgnomeprint2.2-dev libgnomeprintui2.2-dev libpanel-applet-4-dev libnautilus-extension-dev librsvg2-dev libgtkhtml3.14-dev libgtksourceview2.0-dev libgtksourceview2.0-dev libvte-dev libwnck-dev libnspr4-dev libnss3-dev libwebkit-dev 
 
 # apt-get install build-essential autoconf automake bison flex gtk-sharp2-gapi boo gdb valac libfontconfig1-dev libcairo2-dev libpango1.0-dev libfreetype6-dev libexif-dev libtiff4-dev libgif-dev zlib1g-dev libatk1.0-dev libjpeg8-dev libjpeg-turbo8-dev libglib2.0-dev libgtk2.0-dev libglade2-dev libart-2.0-dev libgnomevfs2-dev libgnome-desktop-dev libgnome2-dev libgnomecanvas2-dev libgnomeui-dev libgnomeprint2.2-dev libgnomeprintui2.2-dev libpanel-applet-4-dev libnautilus-extension-dev librsvg2-dev libgtkhtml3.14-dev libgtksourceview2.0-dev libgtksourceview2.0-dev libvte-dev libwnck-dev libnspr4-dev libnss3-dev libwebkit-dev libvala-0.18-dev
 
@@ -57,16 +57,52 @@ make
 make install
 
 
-### as been added to your apache2 folder(/etc/apache2) ###
-# vim /etc/apache2/sites-available/default
-# Modify the line "DocumentRoot /var/www" by "DocumentRoot /var/www/YourFolder" (YourFolder is the folder where you publishing your website!)
-
 # vim /etc/apache2/apache2.conf
 # Add Include /etc/apache2/mod_mono.conf at the end of the file (without quotes!)
 
 # vim /etc/apache2/mod_mono.conf
 # Add MonoServerPath /usr/bin/mod-mono-server4 (without quotes!) under the "If Modules condition"
+# OR
+# Paste it into below location else ignore this and follow from next line
 
+# http://go-mono.com/config-mod-mono/Default.aspx and copy every thing from the Application Preview and paste it into 
+# should include following
+# Alias /videodow.com "/var/zpanel/hostdata/zadmin/public_html/site_name"
+# MonoServerPath videodow.com "/usr/bin/mod-mono-server4"
+# MonoDebug site.name true
+# MonoSetEnv site.name MONO_IOMAP=all
+# MonoApplications site.name "/site.name:/var/zpanel/hostdata/zadmin/public_html/site_name"
+#  <Location "/site.name">
+#    Allow from all
+#    Order allow,deny
+#    MonoSetServerAlias videodow.com
+#    SetHandler mono
+#    SetOutputFilter DEFLATE
+#    SetEnvIfNoCase Request_URI "\.(?:gif|jpe?g|png)$" no-gzip dont-vary
+#  </Location>
+#  <IfModule mod_deflate.c>
+#    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/javascript
+#  </IfModule>
+
+
+# zpanel > Admin > Module Admin > Apache Config > Select Host & Paste it into custom entry
+# OR
+# Use below mentioned method (Preferred)
+# vi /etc/zpanel/configs/apache/httpd-vhosts.conf
+# Paste it into the VirtualHost
 # /etc/init.d/apache2 restart
+
+# In Visual Studio set Copy Local = true for following dlls
+# System.Web.Helpers.dll
+# System.Web.Mvc.dll
+# System.Web.Razor.dll
+# System.Web.Routing.dll
+# System.Web.WebPages.Deployment.dll
+# System.Web.WebPages.dll
+# System.Web.WebPages.Razor.dll
+
+
+
+
 
 # credits http://mono.1490590.n4.nabble.com/Installation-procedure-of-Mono-3-0-on-Ubuntu-12-04-td4657323.html
