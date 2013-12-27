@@ -8,17 +8,9 @@ apt-get install make
 apt-get install libx11-dev
 apt-get install libexif-dev libjpeg-dev libpng-dev libtiff-def
 
-# sudo apt-get install build-essential autoconf automake \
-# bison flex gtk-sharp2-gapi boo gdb valac libfontconfig1-dev \
-# libcairo2-dev libpango1.0-dev libfreetype6-dev libexif-dev \
-# libtiff4-dev libgif-dev zlib1g-dev libatk1.0-dev libjpeg8-dev \
-# libjpeg-turbo8-dev libglib2.0-dev libgtk2.0-dev libglade2-dev \
-# libart-2.0-dev libgnomevfs2-dev libgnome-desktop-dev \
-# libgnome2-dev libgnomecanvas2-dev libgnomeui-dev libgnomeprint2.2-dev \
-# libgnomeprintui2.2-dev libpanel-applet-4-dev \
-# libnautilus-extension-dev librsvg2-dev libgtkhtml3.14-dev \
-# libgtksourceview2.0-dev libgtksourceview2.0-dev libvte-dev \
-# libwnck-dev libnspr4-dev libnss3-dev libwebkit-dev libvala-0.18-dev
+apt-get install build-essential bison flex gtk-sharp2-gapi boo gdb valac libfontconfig1-dev libcairo2-dev libpango1.0-dev libfreetype6-dev libexif-dev libtiff4-dev libgif-dev zlib1g-dev libatk1.0-dev libjpeg8-dev libjpeg-turbo8-dev libglib2.0-dev libgtk2.0-dev libglade2-dev libart-2.0-dev libgnomevfs2-dev libgnome-desktop-dev libgnome2-dev libgnomecanvas2-dev libgnomeui-dev libgnomeprint2.2-dev libgnomeprintui2.2-dev libpanel-applet-4-dev libnautilus-extension-dev librsvg2-dev libgtkhtml3.14-dev libgtksourceview2.0-dev libgtksourceview2.0-dev libvte-dev libwnck-dev libnspr4-dev libnss3-dev libwebkit-dev 
+
+# apt-get install build-essential autoconf automake bison flex gtk-sharp2-gapi boo gdb valac libfontconfig1-dev libcairo2-dev libpango1.0-dev libfreetype6-dev libexif-dev libtiff4-dev libgif-dev zlib1g-dev libatk1.0-dev libjpeg8-dev libjpeg-turbo8-dev libglib2.0-dev libgtk2.0-dev libglade2-dev libart-2.0-dev libgnomevfs2-dev libgnome-desktop-dev libgnome2-dev libgnomecanvas2-dev libgnomeui-dev libgnomeprint2.2-dev libgnomeprintui2.2-dev libpanel-applet-4-dev libnautilus-extension-dev librsvg2-dev libgtkhtml3.14-dev libgtksourceview2.0-dev libgtksourceview2.0-dev libvte-dev libwnck-dev libnspr4-dev libnss3-dev libwebkit-dev libvala-0.18-dev
 
 # sudo apt-get install -y build-essential libc6-dev g++ gcc libglib2.0-dev pkg-config git-core apache2 apache2-threaded-dev bison gettext autoconf automake libtool libpango1.0-dev libatk1.0-dev libgtk2.0-dev libtiff4-dev libgif-dev libglade2-dev curl
 # http://stackoverflow.com/questions/13365158/installing-mono-3-x-3-0-x-and-or-3-2-x
