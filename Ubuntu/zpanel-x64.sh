@@ -11,7 +11,7 @@ chmod +x installer-10-1-0-ubuntu-64.sh.x
 apt-get install curl
 ./installer-10-1-0-ubuntu-64.sh.x
 
-setso --set server_ip 162.248.9.179
+setso --set server_ip 162.248.166.82
 
 
 # http://www.zvps.co.uk/zpanelcp/ubuntu-12-04
