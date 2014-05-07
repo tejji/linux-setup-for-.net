@@ -56,6 +56,8 @@ cd /opt/mono-3.2.5/mod_mono
 make
 make install
 
+# enable https urls for webclient. Use it  to download and install all Mozilla's root certificates
+mozroots --import --ask-remove --machine
 
 # vim /etc/apache2/apache2.conf
 # Add Include /etc/apache2/mod_mono.conf at the end of the file (without quotes!)
