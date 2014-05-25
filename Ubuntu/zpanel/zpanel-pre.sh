@@ -1,4 +1,5 @@
 # Remove AppArmor before installing zpanel
+# may not be required
 
 /etc/init.d/apparmor stop
 /etc/init.d/apparmor teardown
