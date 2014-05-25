@@ -6,11 +6,10 @@ mkdir setup
 cd setup
 
 apt-get install curl
-sudo bash <(curl -Ss https://raw.github.com/zpanel/installers/master/install/Ubuntu-12_04/10_1_1.sh)
 
-#wget https://raw.github.com/zpanel/installers/master/install/Ubuntu-12_04/10_1_1.sh
-#chmod +x 10_1_1.sh
-#./installer-10-1-0-ubuntu-64.sh.x
+wget https://raw.github.com/zpanel/installers/master/install/Ubuntu-12_04/10_1_1.sh
+chmod +x 10_1_1.sh
+./10_1_1.sh
 
 #setso --set server_ip 162.248.9.179
 
