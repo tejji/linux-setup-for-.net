@@ -1,5 +1,7 @@
 #!/bin/bash -e
 # login as root
+# wget https://raw.githubusercontent.com/tejji/linux-setup-for-.net/master/Ubuntu/zpanel/zpanel-x64.sh
+# sudo bash zpanel-x64.sh
 
 cd /opt
 mkdir setup
