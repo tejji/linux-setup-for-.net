@@ -1,3 +1,6 @@
+apt-get update -y
+apt-get upgrade -y 
+
 # install Ajenti - http://support.ajenti.org/topic/349868-installing-on-ubuntu/
 # wget -O- https://raw.github.com/Eugeny/ajenti/master/scripts/install-ubuntu.sh | sudo sh
 
