@@ -1,12 +1,6 @@
-apt-get update
-apt-get upgrade -y
-apt-get install autoconf automake libtool g++ gettext
-apt-get install mono-gmcs
-apt-get install git
-apt-get install apache2-threaded-dev
-apt-get install make 
-apt-get install libx11-dev
-apt-get install libexif-dev libjpeg-dev libpng-dev libtiff-def
+apt-get update -y
+apt-get upgrade -y 
+apt-get install autoconf automake libtool g++ gettext mono-gmcs git apache2-threaded-dev make libx11-dev libexif-dev libjpeg-dev libpng-dev libtiff-def -y
 # may be above 2 lines are optional
 # apt-get install build-essential bison flex gtk-sharp2-gapi boo gdb valac libfontconfig1-dev libcairo2-dev libpango1.0-dev libfreetype6-dev libexif-dev libtiff4-dev libgif-dev zlib1g-dev libatk1.0-dev libjpeg8-dev libjpeg-turbo8-dev libglib2.0-dev libgtk2.0-dev libglade2-dev libart-2.0-dev libgnomevfs2-dev libgnome-desktop-dev libgnome2-dev libgnomecanvas2-dev libgnomeui-dev libgnomeprint2.2-dev libgnomeprintui2.2-dev libpanel-applet-4-dev libnautilus-extension-dev librsvg2-dev libgtkhtml3.14-dev libgtksourceview2.0-dev libgtksourceview2.0-dev libvte-dev libwnck-dev libnspr4-dev libnss3-dev libwebkit-dev 
 
@@ -27,31 +21,31 @@ export LD_LIBRARY_PATH=$PREFIX/lib:$LD_LIBRARY_PATH
 #source ~/.bash_profile
 
 cd /opt
-mkdir mono-3.2.5
-cd /opt/mono-3.2.5
+mkdir mono-3.x
+cd /opt/mono-3.x
 
 git clone git://github.com/mono/mono.git
 git clone git://github.com/mono/xsp.git
 git clone git://github.com/mono/libgdiplus.git
 git clone git://github.com/mono/mod_mono.git
 
-cd /opt/mono-3.2.5/libgdiplus
+cd /opt/mono-3.x/libgdiplus
 ./autogen.sh --prefix=$PREFIX
 make
 make install
 
-cd /opt/mono-3.2.5/mono/
+cd /opt/mono-3.x/mono/
 make clean
 ./autogen.sh --prefix=$PREFIX
 make
 make install
 
-cd /opt/mono-3.2.5/xsp
+cd /opt/mono-3.x/xsp
 ./autogen.sh --prefix=$PREFIX
 make
 make install
 
-cd /opt/mono-3.2.5/mod_mono
+cd /opt/mono-3.x/mod_mono
 ./autogen.sh --prefix=$PREFIX
 make
 make install
