@@ -15,5 +15,6 @@ bash <(curl -LSs https://raw.github.com/zpanel/installers/master/install/Ubuntu-
 
 # install mono
 apt-get install mono-complete -y
+sudo apt-get install libapache2-mod-mono mono-apache-server2 -y
 # apt-get install mono-fastcgi-server4 -y
 
