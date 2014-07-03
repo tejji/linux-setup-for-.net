@@ -76,6 +76,8 @@ sudo certmgr -ssl -m https://ak.quantcast.com/quantcast-top-million.zip
 # Ajenti add website https://ip-address:8000 >> Web >> Websites >> General >>  Create >> Create Directory >> Set >> Domains >> Add >> General Uncheck Maintenance Mode >> Apply Changes >> Back >> Restart Website
 
 # setup up ASP MVC site
+# remove mono source code
+# remove package files
 
 
 
