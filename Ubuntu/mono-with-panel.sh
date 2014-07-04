@@ -37,7 +37,7 @@ sudo certmgr -ssl -m https://ak.quantcast.com/quantcast-top-million.zip
 mkdir /srv/startup
 echo "fastcgi-mono-server4 /applications=/:/srv/www/site.com/ /socket=tcp:127.0.0.1:9000" >> /srv/startup/startup.fastcgi.sh
 chmod +x /srv/startup/startup.fastcgi.sh
-crontab -l | { cat; echo "@reboot /srv/startup/startup.fastcgi.sh"; }rontab -
+crontab -l | { cat; echo "@reboot /srv/startup/startup.fastcgi.sh"; } crontab -
 
 
 reboot
