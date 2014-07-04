@@ -7,6 +7,7 @@ wget -O- https://raw.github.com/Eugeny/ajenti/master/scripts/install-ubuntu.sh |
 # install Ajenti V - http://support.ajenti.org/topic/353398-installing-ajenti-v-on-debian/
 apt-get remove apache2
 apt-get install ajenti-v ajenti-v-nginx ajenti-v-mysql ajenti-v-php-fpm php5-mysql -y
+apt-get install ajenti-v-ftp-pureftpd -y
 service ajenti restart
 
 # install mono
@@ -69,9 +70,14 @@ cd /opt/mono-3.x/mod_mono
 make
 make install
 
+apt-get install mono-fastcgi-server4 -y
+
 # enable https urls for webclient. Use it  to download and install all Mozilla's root certificates
 sudo mozroots --import --ask-remove --machine
 sudo certmgr -ssl -m https://ak.quantcast.com/quantcast-top-million.zip
+
+# ln -s /srv /var/www
+# chown -R www-data:www-data /var/www
 
 # Ajenti add website https://ip-address:8000 >> Web >> Websites >> General >>  Create >> Create Directory >> Set >> Domains >> Add >> General Uncheck Maintenance Mode >> Apply Changes >> Back >> Restart Website
 
@@ -79,6 +85,7 @@ sudo certmgr -ssl -m https://ak.quantcast.com/quantcast-top-million.zip
 # remove mono source code
 # remove package files
 
+reboot
 
 
 
