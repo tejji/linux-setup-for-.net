@@ -1,3 +1,4 @@
+# replace site.com with your domain name before running this script
 apt-get update -y
 apt-get upgrade -y 
 
@@ -32,6 +33,10 @@ sudo certmgr -ssl -m https://ak.quantcast.com/quantcast-top-million.zip
 # >> Back >> Restart Website
 
 # fastcgi-mono-server4 /applications=/:/srv/www/hitfront.com/ /socket=tcp:127.0.0.1:9000
+# @reboot /srv/startup.fastcgi.sh
+echo "fastcgi-mono-server4 /applications=/:/srv/www/site.com/ /socket=tcp:127.0.0.1:9000" >> /srv/startup.fastcgi.sh
+crontab -l | { cat; echo "@reboot /srv/startup.fastcgi.sh"; }rontab -
+
 
 reboot
 
