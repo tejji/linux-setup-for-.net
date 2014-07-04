@@ -59,6 +59,9 @@ make install
 cd /opt/mono-3.x/mono/
 make clean
 ./autogen.sh --prefix=$PREFIX
+#http://blog.erikd.org/2013/03/17/run-asp-dot-net-mvc4-on-ubuntu-12-dot-10/
+make get-monolite-latest
+make EXTERNAL_MCS=${PWD}/mcs/class/lib/monolite/gmcs.exe
 make
 make install
 
