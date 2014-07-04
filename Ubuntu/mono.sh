@@ -75,6 +75,11 @@ cd /opt/mono-3.x/mod_mono
 make
 make install
 
+apt-get install mono-apache-server4 -y
+apt-get install mono-xsp4 -y
+apt-get install mono-fastcgi-server4 -y
+
+
 # enable https urls for webclient. Use it  to download and install all Mozilla's root certificates
 sudo mozroots --import --ask-remove --machine
 sudo certmgr -ssl -m https://ak.quantcast.com/quantcast-top-million.zip
