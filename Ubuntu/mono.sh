@@ -67,7 +67,7 @@ make install
 
 cd /opt/mono-3.x/xsp
 ./autogen.sh --prefix=$PREFIX
-make
+# make
 make install
 
 cd /opt/mono-3.x/mod_mono
