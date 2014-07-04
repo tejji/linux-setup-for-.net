@@ -32,15 +32,21 @@ sudo certmgr -ssl -m https://ak.quantcast.com/quantcast-top-million.zip
 # }
 # >> Back >> Restart Website
 
+# publish mvc site >> run commands from crontab.sh >> copy to crontab -e
+# reboot
+# test site.com
+
+
+
+# EXTRA
 # fastcgi-mono-server4 /applications=/:/srv/www/hitfront.com/ /socket=tcp:127.0.0.1:9000
 # @reboot /srv/startup.fastcgi.sh
-mkdir /srv/startup
-echo "fastcgi-mono-server4 /applications=/:/srv/www/site.com/ /socket=tcp:127.0.0.1:9000" >> /srv/startup/startup.fastcgi.sh
-chmod +x /srv/startup/startup.fastcgi.sh
-crontab -l | { cat; echo "@reboot /srv/startup/startup.fastcgi.sh"; } | crontab -
+# mkdir /srv/startup
+# echo "fastcgi-mono-server4 /applications=/:/srv/www/site.com/ /socket=tcp:127.0.0.1:9000" >> /srv/startup/startup.fastcgi.sh
+# chmod +x /srv/startup/startup.fastcgi.sh
+# crontab -l | { cat; echo "@reboot /srv/startup/startup.fastcgi.sh"; } | crontab -
 
 
-reboot
 
 # remove mono
 # apt-get purge libmono* cli-common mono-runtime
