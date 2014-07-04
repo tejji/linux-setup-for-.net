@@ -34,8 +34,10 @@ sudo certmgr -ssl -m https://ak.quantcast.com/quantcast-top-million.zip
 
 # fastcgi-mono-server4 /applications=/:/srv/www/hitfront.com/ /socket=tcp:127.0.0.1:9000
 # @reboot /srv/startup.fastcgi.sh
-echo "fastcgi-mono-server4 /applications=/:/srv/www/site.com/ /socket=tcp:127.0.0.1:9000" >> /srv/startup.fastcgi.sh
-crontab -l | { cat; echo "@reboot /srv/startup.fastcgi.sh"; }rontab -
+mkdir /srv/startup
+echo "fastcgi-mono-server4 /applications=/:/srv/www/site.com/ /socket=tcp:127.0.0.1:9000" >> /srv/startup/startup.fastcgi.sh
+chmod +x /srv/startup/startup.fastcgi.sh
+crontab -l | { cat; echo "@reboot /srv/startup/startup.fastcgi.sh"; }rontab -
 
 
 reboot
