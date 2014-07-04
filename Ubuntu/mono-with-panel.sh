@@ -87,7 +87,9 @@ sudo certmgr -ssl -m https://ak.quantcast.com/quantcast-top-million.zip
 
 reboot
 
-
+# remove mono
+# apt-get purge libmono* cli-common mono-runtime
+# apt-get autoremove
 
 
 
