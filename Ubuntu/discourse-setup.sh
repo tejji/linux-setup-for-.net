@@ -1,6 +1,7 @@
 apt-get update
 apt-get upgrade -y
 apt-get install git -y
+sudo apt-get install python3-yaml python3-xtermcolor -y
 wget -qO- https://get.docker.io/ | sh
 mkdir /var/docker
 git clone https://github.com/discourse/discourse_docker.git /var/docker
@@ -25,3 +26,8 @@ vi containers/app.yml
 
 # whenever you change app.yml you need to run 
 #./launcher rebuild app
+
+# to ensure that mails are delivered run mailtest
+#./launcher mailtest app
+
+
